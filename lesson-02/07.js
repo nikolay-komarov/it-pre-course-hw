@@ -7,11 +7,14 @@ let passportMarried = {
   }
 };
 
-console.log(passportMarried);
-
-const newPassportMarried = {
-  ...structuredClone(passportMarried),
+let passportMarried2 = {
+  ...passportMarried,
   married: true,
+  address: {
+    ...passportMarried.address
+  },
 };
+passportMarried2.married = true;
 
-console.log(newPassportMarried);
+console.log(passportMarried);
+console.log(passportMarried2);
